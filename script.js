@@ -45,6 +45,7 @@ perguntas = [
   // PARTE 3: Variáveis para controle do jogo
   let indiceAtual = 0; // Índice da pergunta atual
   let acertos = 0; // Contador de acertos
+  let mensagemAdicional = ""; // eu inseri
   
   // PARTE 4: Função para carregar uma nova pergunta
   function carregarPergunta() {
@@ -74,7 +75,14 @@ perguntas = [
   
         // Avança para a próxima pergunta
         indiceAtual++;
-  
+        
+        // Aviso de nivel de conhecimento
+        if(acertos > 6){
+            mensagemAdicional = "Parabéns seu conhecimento biblico é otimo, continue assim." // presico resolver e colocar ess mensagem na caixa, tela final
+          } else {
+              mensagemAdicional = "Sua nota foi baixa, que tal lermos mais a Bíblia."
+            };
+          
         // Se ainda houver perguntas, carrega a próxima pergunta
         if (indiceAtual < perguntas.length) {
           carregarPergunta(); // Carrega a próxima pergunta
@@ -82,6 +90,8 @@ perguntas = [
           // Se não houver mais perguntas, finaliza o jogo
           finalizarJogo();
         }
+
+        
       };
   
       // Adiciona o botão de resposta à tela, dentro do elemento 'respostasElemento'
@@ -89,13 +99,10 @@ perguntas = [
     }
   }
   
+    
   // PARTE 5: Função para mostrar a tela final
   function finalizarJogo() {
-    textoFinal.innerHTML = `Seu conhecimento lhe deu um total de ${acertos} pontos, de ${perguntas.length} perguntas`; // Exibe o resultado
-    if(acertos > 6){
-      alert("Parabéns seu conhecimento biblico é otimo, continue assim.")
-    }
-  
+    textoFinal.innerHTML = `Seu conhecimento lhe deu um total de ${acertos} pontos, de ${perguntas.length} perguntas. ${mensagemAdicional}`; // Exibe o resultado
     conteudo.style.display = "none"; // Esconde as perguntas
     conteudoFinal.style.display = "flex"; // Mostra a tela final
   }
