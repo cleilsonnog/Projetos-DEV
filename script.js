@@ -32,6 +32,14 @@ perguntas = [
         {opcao: "Marcos", correto: false}
         ]
     },
+    {
+      pergunta: "Quantos discípulos acompanhava Jesus Cristo ?", //pergunta 4....
+      respostas:[
+        {opcao: "10", correto: false},
+        {opcao: "12", correto: true},
+        {opcao: "15", correto: false}
+        ]
+    },
   ];
   
   // PARTE 2: Pegando os elementos do HTML
@@ -80,7 +88,7 @@ perguntas = [
         if(acertos > 6){
             mensagemAdicional = "Parabéns seu conhecimento biblico é otimo, continue assim." // presico resolver e colocar ess mensagem na caixa, tela final
           } else {
-              mensagemAdicional = "Sua nota foi baixa, que tal lermos mais a Bíblia."
+              mensagemAdicional = "Sua nota foi baixa, que tal lermos mais um pouco a Bíblia."
             };
           
         // Se ainda houver perguntas, carrega a próxima pergunta
@@ -102,7 +110,8 @@ perguntas = [
     
   // PARTE 5: Função para mostrar a tela final
   function finalizarJogo() {
-    textoFinal.innerHTML = `Seu conhecimento lhe deu um total de ${acertos} pontos, de ${perguntas.length} perguntas. ${mensagemAdicional}`; // Exibe o resultado
+    textoFinal.innerHTML = `Seu conhecimento lhe deu um total de ${acertos} pontos.<br> Total de ${perguntas.length} perguntas.<br> ${mensagemAdicional}`; // Exibe o resultado
+    
     conteudo.style.display = "none"; // Esconde as perguntas
     conteudoFinal.style.display = "flex"; // Mostra a tela final
   }
