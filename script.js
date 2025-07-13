@@ -1,7 +1,7 @@
 // PARTE 1: Lista de perguntas e respostas
 perguntas = [
     {
-      pergunta: "Quantos livro tem na Biblia ?", //pergunta 1
+      pergunta: "Quantos livros tem na Biblia ?", //pergunta 1
       respostas: [
         { opcao: "66 livros", correto: true },
         { opcao: "39 livros", correto: false },
