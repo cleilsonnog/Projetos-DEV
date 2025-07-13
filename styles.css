@@ -1,197 +1,188 @@
 body {
-    background: url("https://i.postimg.cc/HnGcNnDp/Bulma-Amaral-Leao-de-Juda-793353-1280-847-0-0.webp") no-repeat center
-      center fixed;
-    background-size: cover;
-    font-family: "Gabarito", sans-serif;
-    margin: 20px;
+  background: url("https://i.postimg.cc/HnGcNnDp/Bulma-Amaral-Leao-de-Juda-793353-1280-847-0-0.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Gabarito", sans-serif;
+  margin: 20px;
+}
+
+.logo {
+  text-align: end;
+}
+
+.logo img {
+  width: 40%;
+}
+
+/* Caixa principal do jogo */
+.conteudo-jogo {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px #ff1b7b;
+  margin: 30px;
+  padding: 20px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.conteudo-jogo:hover {
+  background: rgba(0, 0, 0);
+  box-shadow: 0 0 5px #19caca;
+
+}
+
+/* Títulos e textos */
+h2,
+p {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+h3,
+p {
+  color: white;
+}
+
+/*Estrutura do questionário */
+.questionario {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 70%;
+  max-width: 70%;
+}
+
+/* Área de conteúdo */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 20px;
+}
+
+/* Estilo da pergunta */
+.pergunta {
+  font-weight: 600;
+  color: white;
+}
+
+/* Progresso da pergunta */
+.progresso {
+  text-align: end;
+  font-size: small;
+  font-weight: 500;
+  color: white;
+}
+
+/* Área das respostas */
+.respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Botões de resposta */
+.botao-resposta {
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  /*eu alterei para ficar no centro as respostas*/
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  background: #ff1b7b;
+  color: white;
+}
+
+.botao-resposta:hover {
+  background: #19caca;
+  font-weight: 600;
+}
+
+/* Tela de fim do jogo */
+.fim {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fim span {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 1200;
+  font-size: 30px;
+  color: white;
+}
+
+footer {
+  display: inline;
+  align-items: center;
+}
+
+footer p {
+  background-color: #be76ac6c;
+  padding: 10px;
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.901);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    margin: 10px;
   }
-  
-  .logo {
-    text-align: end;
-  }
-  
-  .logo img {
-    width: 40%;
-  }
-  
-  /* Caixa principal do jogo */
+
   .conteudo-jogo {
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 5px #ff1b7b;
-    margin: 30px;
-    padding: 20px;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
     margin-top: 2rem;
+    padding: 10px;
+    height: 60%;
   }
-  
-  .conteudo-jogo:hover {
-    background: rgba(0, 0, 0);
-    box-shadow: 0 0 5px #19caca;
-    
+
+  .logo img {
+    width: 80%;
   }
-  
-  /* Títulos e textos */
-  h2,
-  p {
-    text-align: center;
-    margin-top: 6rem;
-    font-size: 2.5rem;
-    color: white;
-   }
-  h3,
-  p {
-    color: white;
-    }
-    /*Estrutura do questionário */
-  .questionario {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    width: 70%;
-    max-width: 70%;
-  }
-  
-  /* Área de conteúdo */
-  .conteudo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    gap: 20px;
-  }
-  
-  /* Estilo da pergunta */
-  .pergunta {
-    font-weight: 600;
-    color: white;
-  }
-  
-  /* Progresso da pergunta */
+
   .progresso {
-    text-align: end;
-    font-size: small;
-    font-weight: 500;
-    color: white;
+    font-size: 20px;
   }
-  
-  /* Área das respostas */
-  .respostas {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+
+  .questionario {
+    width: 80%;
+    max-width: 100%;
   }
-  
-  /* Botões de resposta */
+
+  .pergunta {
+    font-size: 25px;
+  }
+
   .botao-resposta {
-    width: 100%;
-    height: 3rem;
-    text-align: center; /*eu alterei para ficar no centro as respostas*/
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-    background: #ff1b7b;
-    color: white;
+    height: 3.5rem;
+    font-size: 20px;
   }
-  
-  .botao-resposta:hover {
-    background: #19caca;
-    font-weight: 600;
-  }
-  
-  /* Tela de fim do jogo */
-  .fim {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
+
   .fim span {
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: 1200;
-    font-size: 30px;
-    color: white;
+    font-size: 40px;
   }
+
+
   footer p {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 15px;
-    text-align: center;
-    color:  rgba(0, 0, 0, 0.901);
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  /* Responsividade */
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    body {
-      margin: 10px;
-    }
-  
-    .conteudo-jogo {
-      margin-top: 2rem;
-      padding: 10px;
-      height: 60%;
-    }
-  
-    .logo img {
-      width: 80%;
-    }
-
-    .progresso {
-      font-size: 20px;
-    }
-  
-    .questionario {
-      width: 80%;
-      max-width: 100%;
-    }
-
-    .pergunta {
-      font-size: 25px;
-    }
-  
-    .botao-resposta {
-      height: 3.5rem;
-      font-size: 20px;
-    }
-
-    .fim span {
-      font-size: 40px;
-    }
-  
-  
-    footer p {
-      position: fixed;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 20px;
-      color: rgba(0, 0, 0, 0.901);
-    }
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 20px;
+    background-color: #be76ac6c;
+    padding: 10px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.901);
   }
 
 
-    
-
+}
