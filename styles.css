@@ -124,6 +124,7 @@ footer {
 }
 
 footer p {
+  font-size: 30px;
   background-color: #be76ac6c;
   padding: 10px;
   border-radius: 8px;
